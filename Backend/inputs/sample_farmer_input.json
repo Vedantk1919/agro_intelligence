@@ -1,0 +1,10 @@
+{
+  "name": "Ravi",
+  "Soil_pH": 6.3,
+  "Soil_Moisture": 18.7,
+  "Temperature_C": 30.0,
+  "Rainfall_mm": 75.2,
+  "Market_Price_per_ton": 4500,
+  "Demand_Index": 8.5,
+  "Consumer_Trend_Index": 7.8
+}
