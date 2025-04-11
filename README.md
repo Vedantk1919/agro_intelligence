@@ -61,4 +61,6 @@ An AI-powered, multi-agent web application that assists farmers in making data-d
 
 ---
 
+## links to crop_model.pkl and datasets of farmer_advisor and market_advisor 
 
+https://drive.google.com/drive/folders/1eDOqEcLkm4HrV6BsooVY43lPRjLpxG1D?usp=sharing
