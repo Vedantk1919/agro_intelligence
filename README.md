@@ -51,7 +51,8 @@ An AI-powered, multi-agent web application that assists farmers in making data-d
 
 ---
 
-## 📸 Demo
+## 📸 Demo Video Link
+https://drive.google.com/file/d/1mJfWDPZGODSHulM98HzbcMGTKv1D7B-z/view?usp=sharing
 
 | Component | Preview |
 |----------|---------|
