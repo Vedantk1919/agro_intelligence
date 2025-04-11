@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 30% 97%; /* #F0F5F5 - Softer background */
+    --foreground: 174 25% 16%; /* #243E3E - Softer text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 174 25% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 174 25% 16%;
+
+    --primary: 174 46% 40%; /* #2A9D8F - Soft teal */
+    --primary-foreground: 180 30% 97%;
+
+    --secondary: 35 77% 80%; /* #F8D49F - Soft peach */
+    --secondary-foreground: 174 25% 16%;
+
+    --muted: 180 24% 92%;
+    --muted-foreground: 174 15% 45%;
+
+    --accent: 168 58% 90%; /* #D7F2ED - Soft mint */
+    --accent-foreground: 174 25% 16%;
+
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 180 30% 97%;
+
+    --border: 174 25% 85%;
+    --input: 174 25% 85%;
+    --ring: 174 46% 40%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 174 25% 16%;
+    --sidebar-foreground: 180 30% 97%;
+    --sidebar-primary: 174 46% 40%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 174 20% 25%;
+    --sidebar-accent-foreground: 180 30% 97%;
+    --sidebar-border: 174 20% 30%;
+    --sidebar-ring: 174 46% 40%;
+  }
+
+  .dark {
+    --background: 174 25% 16%; /* #243E3E - Dark background */
+    --foreground: 180 30% 97%; /* #F0F5F5 - Light text */
+
+    --card: 174 22% 22%; /* #304B4B - Dark card */
+    --card-foreground: 180 30% 97%;
+
+    --popover: 174 22% 22%;
+    --popover-foreground: 180 30% 97%;
+
+    --primary: 174 46% 40%; /* #2A9D8F - Consistent teal */
+    --primary-foreground: 180 30% 97%;
+
+    --secondary: 35 77% 65%; /* #F5BC67 - Richer peach */
+    --secondary-foreground: 174 25% 16%;
+
+    --muted: 174 15% 30%;
+    --muted-foreground: 180 15% 80%;
+
+    --accent: 168 30% 45%;
+    --accent-foreground: 180 30% 97%;
+
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 180 30% 97%;
+
+    --border: 174 20% 30%;
+    --input: 174 20% 30%;
+    --ring: 174 46% 40%;
+
+    --sidebar-background: 174 25% 15%;
+    --sidebar-foreground: 180 30% 97%;
+    --sidebar-primary: 174 46% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 20% 20%;
+    --sidebar-accent-foreground: 180 30% 97%;
+    --sidebar-border: 174 20% 35%;
+    --sidebar-ring: 174 46% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-playfair;
+  }
+}
+
+/* Specific styles for agriculture dashboard */
+.agriculture-gradient {
+  background: linear-gradient(180deg, rgba(215, 242, 237, 0.5) 0%, rgba(215, 242, 237, 0) 100%);
+}
+
+.card-hover-effect {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(42, 157, 143, 0.15), 0 10px 10px -5px rgba(42, 157, 143, 0.08);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Gradients */
+.bg-gradient-green-blue {
+  background: linear-gradient(135deg, rgba(215, 242, 237, 0.4) 0%, rgba(42, 157, 143, 0.2) 100%);
+}
+
+.bg-gradient-stats {
+  background: linear-gradient(90deg, hsla(174, 46%, 40%, 0.8) 0%, hsla(35, 77%, 75%, 0.8) 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Progress bar animation */
+@keyframes fillProgress {
+  from { width: 0%; }
+  to { width: var(--value-percent); }
+}
+
+.animated-progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 100%);
+  border-radius: 9999px;
+  animation: fillProgress 1s ease-out forwards;
+}
