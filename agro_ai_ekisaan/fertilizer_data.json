@@ -1,0 +1,19 @@
+{
+    "wheat": {
+      "fertilizer": "Use 120 kg N, 60 kg P, 40 kg K per hectare.",
+      "pesticide": "Apply Chlorpyrifos @ 2.5 ml/litre water for pests."
+    },
+    "rice": {
+      "fertilizer": "Use 100 kg N, 50 kg P, 50 kg K per hectare.",
+      "pesticide": "Apply Monocrotophos @ 2 ml/litre water for stem borers."
+    },
+    "maize": {
+      "fertilizer": "Use 150 kg N, 75 kg P, 40 kg K per hectare.",
+      "pesticide": "Apply Carbaryl @ 4 gm/litre water."
+    },
+    "cotton": {
+      "fertilizer": "Use 100 kg N, 50 kg P, 50 kg K per hectare.",
+      "pesticide": "Apply Imidacloprid @ 0.5 ml/litre water."
+    }
+  }
+  
